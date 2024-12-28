@@ -168,7 +168,7 @@ jobs:
         PATH=~/bin:$PATH
         cd ${{ steps.pwd.outputs.pwd }}
         cd bootable/recovery
-        git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/29/5729/1 && git cherry-pick FETCH_HEAD
+        git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/29/5729/1 && git cherry-pick FETCH_HEAD | true
 
     - name: Building recovery
       run: |
